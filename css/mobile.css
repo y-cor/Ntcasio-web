@@ -1,0 +1,466 @@
+* {
+    font-family: 'cairo';
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    min-height: 100%;
+    position: relative;
+}
+
+.footer {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    margin-top: 40px;
+    clear: both;
+}
+
+.upper {
+    width: 100%;
+    height: fit-content;
+    background-color: #f3f3f3;
+    color: black;
+    padding: 20px 15px;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.down {
+    width: 100%;
+    height: fit-content;
+    background-color: #475C64;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.left {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center;
+    padding: 0;
+    font-size: 14px;
+    gap: 10px;
+    width: 100% !important;
+    max-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.social {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 15px;
+    gap: 8px;
+    flex-wrap: wrap;
+    width: 100% !important;
+    max-width: 100%;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.social a {
+    display: inline-flex;
+    margin: 0;
+}
+
+.social button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px;
+    border-radius: 50% !important;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: visible;
+    white-space: nowrap;
+    padding: 0;
+}
+
+.social button img {
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0;
+    flex-shrink: 0;
+    display: block;
+}
+
+.social button:hover {
+    width: auto !important;
+    min-width: auto;
+    padding: 0 8px;
+    border-radius: 19px !important;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.social button:hover::before {
+    color: white;
+    font-size: 11px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.phone {
+    background-color: #0bb37b;
+}
+
+.phone:hover::before {
+    content: "Call Us Now";
+}
+
+.email {
+    background-color: #2f4bff;
+    color: white;
+}
+
+.email:hover::before {
+    content: "Email Us Now";
+}
+
+.whatsapp {
+    background-color: #25d366;
+}
+
+.whatsapp:hover::before {
+    content: "Message Us Now";
+}
+
+.facebook {
+    background-color: #1877f2;
+}
+
+.facebook:hover::before {
+    content: "Facebook Page";
+}
+
+.instagram {
+    background: linear-gradient(
+        135deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
+}
+
+.instagram:hover::before {
+    content: "Instagram Page";
+}
+
+.youtube {
+    background-color: #ff0000;
+}
+
+.youtube:hover::before {
+    content: "YouTube Channel";
+}
+
+/* Allow hover effects on mobile for touch devices - they work fine */
+
+.left p {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 8px;
+    font-size: 12px;
+    word-break: break-word;
+}
+
+.left a {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 8px;
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    word-break: break-all;
+}
+
+.left a:hover {
+    text-decoration: underline;
+}
+
+.num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.num img {
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+
+.em {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.em img {
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+
+.web22 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.web22 img {
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+
+#sticky {
+    border-radius: 50%;
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    background-color: #00b643;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+#sticky2 {
+    border-radius: 50%;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 0px;
+    height: 50px;
+    width: 50px;
+}
+
+.header {
+    float: center;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    text-align: center;
+    display: block;
+    background-color: #f3f3f38a;
+    position: fixed;
+}
+
+.logo {
+    height: fit-content;
+    width: fit-content;
+    float: left;
+}
+
+.logo img {
+    height: 75px;
+}
+
+.right {
+    display: block;
+    float: right;
+    bottom: 0;
+    direction: rtl;
+    margin-left: 0px;
+}
+
+.right a {
+    float: center;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    font-size: 25px;
+    direction: rtl;
+}
+
+.right a:hover {
+    background-color: #ddd;
+}
+
+.right a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.container {
+    margin-top: 20% !important;
+    padding-bottom: 200px !important;
+    height: fit-content !important;
+    min-height: auto !important;
+}
+
+/*container CSS*/
+.upper-photos img {
+    width: 85% !important;
+}
+
+.iframes {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    padding: 20px 10px !important;
+}
+
+.ifacebook {
+    width: 100% !important;
+    max-width: 350px !important;
+    margin: 0 auto !important;
+}
+
+.ifacebook iframe {
+    height: 400px !important;
+    width: 100% !important;
+    max-width: 350px !important;
+    margin: 0 !important;
+}
+
+.maps {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    min-width: auto !important;
+}
+
+.maps iframe {
+    height: 400px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: auto !important;
+}
+
+.img2 {
+    margin-left: 2.5% !important;
+}
+
+/* Removed fixed height - using container padding-bottom instead */
+
+.social2 a {
+    margin: 10px !important;
+}
+
+/* Add this to the end of mobile.css */
+
+/* Grid layout for social buttons in call us section */
+.social2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 15px 0;
+    justify-items: center;
+}
+
+.social2 a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 !important; /* Remove any existing margins */
+}
+
+.social2 button {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: white;
+    border: none;
+    width: 100%;
+    max-width: 150px;
+    justify-content: center;
+}
+
+/* Button text styling */
+.social2 button::before {
+    display: inline-block;
+    margin-right: 8px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Button content */
+.social2 .phone::before { content: "Call"; }
+.social2 .email::before { content: "Email"; }
+.social2 .whatsapp::before { content: "WhatsApp"; }
+.social2 .facebook::before { content: "Facebook"; }
+.social2 .instagram::before { content: "Instagram"; }
+.social2 .youtube::before { content: "YouTube"; }
+
+/* Button icons */
+.social2 button img {
+    height: 20px;
+    width: 20px;
+    margin: 0;
+}
+
+/* Responsive adjustment */
+@media (max-width: 480px) {
+    .social2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .social2 button::before {
+        font-size: 12px;
+    }
+}
+
+/* Remove conflicting styles */
+.social2 a {
+    margin: 0 !important; /* Remove any existing margins */
+}
+
+.social2 .facebook::before{
+    margin: 8px;
+}
+

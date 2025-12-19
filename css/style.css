@@ -1,0 +1,774 @@
+* {
+  font-family: "cairo";
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.container{
+    height: fit-content;
+    min-height: 100vh;
+    padding-bottom: 180px;
+}
+
+.footer {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  margin-top: 60px;
+  clear: both;
+}
+
+.upper {
+  width: 100%;
+  height: fit-content;
+  background-color: #f3f3f3;
+  color: black;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.down {
+  width: 100%;
+  height: fit-content;
+  background-color: #475c64;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  font-size: 16px;
+  gap: 10px;
+  flex: 1;
+  min-width: 260px;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  font-size: 15px;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex: 1;
+  min-width: 260px;
+}
+
+/* Social buttons - unified size and spacing */
+.social button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.social button img {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.social button:hover {
+  width: auto;
+  padding: 0 12px;
+  border-radius: 21px;
+  transform: translateY(-3px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social button:hover::before {
+  color: white;
+  font-size: 14px;
+  margin-left: 8px;
+  display: inline-block;
+}
+
+.phone {
+  background-color: #0bb37b;
+}
+
+.phone:hover::before {
+  content: "Call Us Now";
+}
+
+.email {
+  background-color: #2f4bff;
+  color: white;
+}
+
+.email:hover::before {
+  content: "Email Us Now";
+}
+
+.whatsapp {
+  background-color: #25d366;
+}
+
+.whatsapp:hover::before {
+  content: "Message Us Now";
+}
+
+.facebook {
+  background-color: #1877f2;
+}
+
+.facebook:hover::before {
+  content: "Facebook Page";
+}
+
+.instagram {
+  background: linear-gradient(
+    135deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+
+.instagram:hover::before {
+  content: "Instagram Page";
+}
+
+.youtube {
+  background-color: #ff0000;
+}
+
+.youtube:hover::before {
+  content: "YouTube Channel";
+}
+
+.left p {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.left a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  margin-left: 10px;
+  color: black;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.left a:hover {
+  text-decoration: underline;
+}
+
+.num {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.num img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.em {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.em img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.web22 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.web22 img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+#sticky {
+  border-radius: 50%;
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  background-color: #00b643;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+#sticky2 {
+  border-radius: 50%;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 0px;
+  height: 50px;
+  width: 50px;
+}
+
+.header {
+  float: center;
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+  text-align: center;
+  display: block;
+  background-color: #f3f3f38a;
+  position: fixed;
+  z-index: 99;
+}
+
+.logo {
+  height: fit-content;
+  width: fit-content;
+  float: left;
+}
+
+.logo img {
+  height: 75px;
+}
+
+.right {
+  display: block;
+  float: right;
+  bottom: 0;
+  direction: rtl;
+}
+
+.right a {
+  float: right;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+  font-size: 25px;
+  direction: rtl;
+  margin-left: 50px;
+}
+
+.right a:hover {
+  background-color: #ddd;
+}
+
+.right a.active {
+  background-color: dodgerblue;
+  color: white;
+  pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  pointer-events: none;
+}
+
+/* Removed duplicate container definition - using the one at line 28 */
+
+/*container CSS*/
+.upper-photos {
+  height: fit-content;
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+.img1 {
+  width: 100%;
+  height: fit-content;
+}
+
+.img2 {
+  width: 100%;
+  max-width: 1300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.text {
+  width: fit-content;
+  float: center;
+  justify-self: center;
+  height: fit-content;
+}
+
+.text h1 {
+  color: #ff0000;
+}
+
+.text h2 {
+  color: #ff0000;
+  float: right;
+  margin-right: 5%;
+}
+
+.answer {
+  display: block;
+  width: 75%;
+  float: right;
+  margin-right: 7.5%;
+  margin-bottom: 0;
+}
+
+.answer2 {
+  display: block;
+  float: right;
+  margin-right: 7.5%;
+  margin-bottom: 5%;
+  width: 75%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.text p {
+  text-align: right;
+}
+
+.ifacebook {
+  flex: 0 0 380px;
+  display: flex;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  vertical-align: top;
+  line-height: 0;
+  font-size: 0;
+}
+
+.ifacebook iframe {
+  height: 600px;
+  width: 100%;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  line-height: normal;
+}
+
+.maps {
+  margin-bottom: 0%;
+  height: fit-content;
+  border: 0;
+  display: flex;
+  flex: 1 1 auto;
+  vertical-align: top;
+  margin: 0;
+}
+
+.maps iframe {
+  height: 600px;
+  width: 100%;
+  border-radius: 25px;
+  border: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-container {
+  max-width: 1400px;
+  position: relative;
+  margin: auto;
+  width: 95%;
+}
+
+/* Caption text */
+.text2 {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add space between buttons in call us section */
+
+.social2 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social2 button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  height: auto;
+  width: auto;
+}
+
+/* Button colors */
+.social2 .phone {
+  background-color: aqua;
+}
+.social2 .email {
+  background-color: rgb(47, 0, 255);
+}
+.social2 .whatsapp {
+  background-color: #00b643;
+}
+.social2 .facebook {
+  background-color: #3773cc;
+}
+.social2 .instagram {
+  background-color: #e6bf43;
+}
+.social2 .youtube {
+  background-color: #ff0000;
+}
+
+/* Button text styling */
+.social2 button::before {
+  display: inline-block;
+  margin-right: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+/* Button icons */
+.social2 button img {
+  height: 20px;
+  width: 20px;
+  margin: 0;
+}
+
+.social2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 12px; /* Space between buttons */
+  padding: 15px 0;
+  justify-items: center; /* Center items in grid cells */
+}
+
+.social2 a {
+  width: 100%; /* Make buttons fill grid cells */
+  display: flex;
+  justify-content: center;
+}
+
+.social2 button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  width: 100%; /* Fill container */
+  max-width: 150px; /* Prevent over-stretching */
+  justify-content: center;
+}
+
+/* Shorten button labels for better fit */
+.social2 .facebook::before {
+  content: "Facebook";
+}
+.social2 .whatsapp::before {
+  content: "WhatsApp";
+}
+.social2 .instagram::before {
+  content: "Instagram";
+}
+.social2 .youtube::before {
+  content: "YouTube";
+}
+.social2 .phone::before {
+  content: "Call";
+}
+.social2 .email::before {
+  content: "Email";
+}
+
+.iframes {
+  height: fit-content;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: nowrap;
+}
+
+/* For pages without iframes wrapper, wrap them in a flex container effect */
+.container > .ifacebook,
+.container > .maps {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.container > .ifacebook {
+  margin-right: 20px;
+  width: 380px;
+}
+
+.container > .maps {
+  width: calc(100% - 420px);
+  max-width: none;
+}
+
+.m-c {
+  width: 100%;
+  display: block;
+  justify-self: center;
+  height: fit-content;
+  direction: rtl;
+  margin: 5%;
+  overflow: hidden;
+}
+
+.m-c h1 {
+  color: #ff0000;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.category-select {
+  direction: rtl;
+  height: fit-content;
+  width: 90%;
+  margin: 5% auto;
+  float: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.category-select span {
+  float: right;
+  margin-right: auto;
+}
+
+.categorys {
+  float: right;
+  margin-right: 2.5%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.categorys button {
+  border-radius: 25px;
+  border: solid 1px #bbb;
+  padding: 8px 16px;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.categorys button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.button-active {
+  background-color: rgb(0, 140, 255);
+  border: solid 10px rgb(0, 255, 21);
+}
+
+.tcategorys {
+  height: fit-content;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.category {
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  width: 100%;
+  direction: rtl;
+  justify-content: flex-start;
+  padding: 20px 0;
+}
+.c-head {
+  float: right;
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  background-color: #bbb;
+  align-self: center;
+  margin-left: 0%;
+  margin-bottom: 20px;
+  border-right: 10px solid red;
+  padding: 10px 30px;
+  right: 0;
+  border-radius: 5px;
+}
+
+.c-head p{
+  margin: 0px;
+  direction: rtl;
+  float: right;
+}
+
+.product{
+    width: 100%;
+    max-width: 320px;
+    background-color: #00b643;
+    border-radius: 15px;
+    padding: 15px;
+    right: 0;
+    direction: rtl;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product img{
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product ul{
+    width: fit-content;
+    list-style-type:disc;
+    margin-right: 15px;
+}
